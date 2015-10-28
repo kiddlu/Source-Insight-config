@@ -1,0 +1,327 @@
+; C Token Macros
+; These macros are expanded by Source Insight prior to parsing C and C++ files.
+
+; AtlCom Property Map
+BEGIN_PROPERTY_MAP(theClass)
+BEGIN_PROP_MAP(theClass)
+PROP_ENTRY(szDesc, dispid, clsid)
+PROP_ENTRY_EX(szDesc, dispid, clsid, iidDispatch)
+PROP_PAGE(clsid)
+PROP_DATA_ENTRY(szDesc, member, vt)
+END_PROPERTY_MAP()
+END_PROP_MAP()
+
+;cxadd for pjsip
+PJ_DEF(x)
+PJ_DECL(x)
+PJ_IDEF(x)
+PJ_IDECL(x)
+PJ_INLINE(x)
+PJ_DECL_DATA(x) x
+PJ_DECL_NO_RETURN(x)
+PJ_IDECL_NO_RETURN(x)
+PJ_BEGIN_DECL
+PJ_END_DECL
+
+;cxadd for kernel
+EXPORT_SYMBOL(x)
+EXPORT_SYMBOL_GPL(x)
+EXPORT_SYMBOL_PROTO(x)
+DEFINE_SPINLOCK(x)	spinlock_t x = __SPIN_LOCK_UNLOCKED(x)
+DEFINE_RWLOCK(x)	rwlock_t x = __RW_LOCK_UNLOCKED(x)
+BLOCKING_NOTIFIER_HEAD(name)	struct blocking_notifier_head name = BLOCKING_NOTIFIER_INIT(name)
+
+
+;cxadd for libc
+libc_hidden_proto(x)
+libc_hidden_def(name)
+libc_hidden_weak(name)
+libc_hidden_ver(local, name)
+libc_hidden_data_def(name)
+libc_hidden_data_weak(name)
+libc_hidden_data_ver(local, name)
+libm_hidden_proto(x)
+libm_hidden_def(name)
+libm_hidden_weak(name)
+libm_hidden_ver(local, name)
+libm_hidden_data_def(name)
+libm_hidden_data_weak(name)
+libm_hidden_data_ver(local, name)
+strong_alias(name, aliasname)
+weak_alias(name, aliasname)
+__typeof(a) a,
+
+;cxadd for paser syscall define of uClibc
+_syscall0(type, name) type name()
+_syscall1(type, name, type1, arg1) type name(type1 arg1)
+_syscall2(type, name, type1, arg1, type2, arg2) type name(type1 arg1,type2 arg2)
+_syscall3(type, name, type1, arg1, type2, arg2, type3, arg3) type name(type1 arg1,type2 arg2,type3 arg3)
+_syscall4(type, name, type1, arg1, type2, arg2, type3, arg3, type4, arg4) type name (type1 arg1, type2 arg2, type3 arg3, type4 arg4)
+_syscall5(type, name, type1, arg1, type2, arg2, type3, arg3, type4, arg4, type5, arg5) type name (type1 arg1,type2 arg2,type3 arg3,type4 arg4,type5 arg5)
+_syscall6(type, name, type1, arg1, type2, arg2, type3, arg3, type4, arg4, type5, arg5, type6, arg6) type name (type1 arg1,type2 arg2,type3 arg3,type4 arg4,type5 arg5, type6 arg6)
+_syscall7(type, name, type1, arg1, type2, arg2, type3, arg3, type4, arg4, type5, arg5, type6, arg6, type7, arg7) type name (type1 arg1,type2 arg2,type3 arg3,type4 arg4,type5 arg5, type6 arg6,type7 arg7)
+;_syscall3(type, name) type name()
+;_syscall4(type, name) type name()
+;_syscall5(type, name) type name()
+;_syscall6(type, name) type name()
+;_syscall7(type, name) type name()
+
+;cxadd for paser syscall define of kernel
+SYSCALL_DEFINE0(name) long sys_##name()
+SYSCALL_DEFINE1(name, type1, arg1) long sys_##name(type1 arg1)
+SYSCALL_DEFINE2(name, type1, arg1, type2, arg2) long sys_##name(type1 arg1,type2 arg2)
+SYSCALL_DEFINE3(name, type1, arg1, type2, arg2, type3, arg3) long sys_##name(type1 arg1,type2 arg2,type3 arg3)
+SYSCALL_DEFINE4(name, type1, arg1, type2, arg2, type3, arg3, type4, arg4) long sys_##name (type1 arg1, type2 arg2, type3 arg3, type4 arg4)
+SYSCALL_DEFINE5(name, type1, arg1, type2, arg2, type3, arg3, type4, arg4, type5, arg5) long sys_##name (type1 arg1,type2 arg2,type3 arg3,type4 arg4,type5 arg5)
+SYSCALL_DEFINE6(name, type1, arg1, type2, arg2, type3, arg3, type4, arg4, type5, arg5, type6, arg6) long sys_##name (type1 arg1,type2 arg2,type3 arg3,type4 arg4,type5 arg5, type6 arg6)
+SYSCALL_DEFINE7(name, type1, arg1, type2, arg2, type3, arg3, type4, arg4, type5, arg5, type6, arg6, type7, arg7) long sys_##name (type1 arg1,type2 arg2,type3 arg3,type4 arg4,type5 arg5, type6 arg6,type7 arg7)
+;_syscall3(name) type sys_##name()
+;_syscall4(name) type sys_##name()
+;_syscall5(name) type sys_##name()
+;_syscall6(name) type sys_##name()
+;_syscall7(name) type sys_##name()
+
+;cxadd for linux include file
+__THROW
+__wur
+__nonnull(something)
+__attribute__(something)
+__read_mostly
+
+;cxadd for mongoose
+PRINTF_FORMAT_STRING(s)		s
+PRINTF_ARGS(n1, n2)
+
+;cxadd for busybox
+FAST_FUNC
+NORETURN
+RETURNS_MALLOC
+
+; COM Map
+BEGIN_COM_MAP(x)
+DECLARE_GET_CONTROLLING_UNKNOWN()
+_ATL_IIDOF(x)
+COM_INTERFACE_ENTRY_BREAK(x)
+COM_INTERFACE_ENTRY_NOINTERFACE(x)
+COM_INTERFACE_ENTRY(x)
+COM_INTERFACE_ENTRY_IID(iid, x)
+COM_INTERFACE_ENTRY_IMPL(x)
+COM_INTERFACE_ENTRY_IMPL_IID(iid, x)
+COM_INTERFACE_ENTRY2(x, x2)
+COM_INTERFACE_ENTRY2_IID(iid, x, x2)
+COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
+COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
+COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
+COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
+COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
+COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
+COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
+COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
+COM_INTERFACE_ENTRY_CHAIN(classname)
+END_COM_MAP()
+
+
+BEGIN_CATEGORY_MAP(x)
+IMPLEMENTED_CATEGORY( catid )
+REQUIRED_CATEGORY( catid )
+END_CATEGORY_MAP()
+BEGIN_OBJECT_MAP(x)
+END_OBJECT_MAP()
+
+OBJECT_ENTRY(clsid, class)
+OBJECT_ENTRY_NON_CREATEABLE(class)
+
+DECLARE_CLASSFACTORY_SINGLETON(obj)
+DECLARE_OBJECT_DESCRIPTION(x)
+DECLARE_NO_REGISTRY()
+DECLARE_REGISTRY(class, pid, vpid, nid, flags)
+DECLARE_REGISTRY_RESOURCE(x)
+DECLARE_REGISTRY_RESOURCEID(x)
+DECLARE_STATIC_REGISTRY_RESOURCE(x)
+DECLARE_STATIC_REGISTRY_RESOURCEID(x)
+
+
+BEGIN_SERVICE_MAP(x)
+SERVICE_ENTRY(x)
+SERVICE_ENTRY_CHAIN(x)
+END_SERVICE_MAP()
+
+BEGIN_SINK_MAP(_class)
+SINK_ENTRY_INFO(id, iid, dispid, fn, info)
+SINK_ENTRY_EX(id, iid, dispid, fn)
+SINK_ENTRY(id, dispid, fn)
+END_SINK_MAP()
+
+; Misc
+__declspec(name)
+__RPC_FAR
+CALLBACK
+EXPORT
+FAR
+far
+FASTCALL __fastcall	
+NEAR
+PASCAL
+SIZE_T_MAX  UINT_MAX
+UNALIGNED
+ATL_NO_VTABLE 
+AFX_API_EXPORT
+AFX_API_IMPORT
+AFX_CDECL __cdecl
+AFX_CLASS_EXPORT 
+AFX_CLASS_IMPORT 
+AFX_COMDAT 
+AFX_CORE_DATA
+AFX_CORE_DATADEF
+AFX_DATA
+AFX_DATA_EXPORT 
+AFX_DATA_IMPORT 
+AFX_DATADEF
+AFX_DB_DATA
+AFX_DB_DATADEF
+AFX_EXPORT EXPORT
+AFX_EXT_API
+AFX_EXT_CLASS
+AFX_EXT_DATA
+AFX_EXT_DATADEF
+AFX_NET_DATA
+AFX_NET_DATADEF
+AFX_NOVTABLE
+AFX_OLE_DATA
+AFX_OLE_DATADEF
+AFX_STATIC extern
+AFX_STATIC_DATA extern 
+AFXAPI __stdcall
+AFXOLEAPI __stdcall
+BASED_CODE
+BASED_DEBUG
+BASED_STACK
+BEGIN_DUAL_INTERFACE_PART(localClass, baseClass) class X##localClass : public baseClass { public: BEGIN_COM_MAP(X##localClass, localClass) COM_INTERFACE_ENTRY (baseClass) END_COM_MAP()
+BEGIN_INTERFACE_PART(localClass, baseClass) class X##localClass : public baseClass 	{ public: BEGIN_COM_MAP(X##localClass, localClass) COM_INTERFACE_ENTRY (baseClass) END_COM_MAP() public: virtual ULONG STDMETHODCALLTYPE AddRef(); virtual ULONG STDMETHODCALLTYPE Release(); virtual HRESULT STDMETHODCALLTYPE QueryInterface(REFIID iid, void * * ppvObj);
+BEGIN_CONNECTION_PART(theClass, localClass) class X##localClass : public CConnectionPoint { public: X##localClass() { m_nOffset = offsetof(theClass, m_x##localClass); }
+CDECL __cdecl
+CONNECTION_IID(iid) REFIID GetIID() { return iid; }
+DECLARE_AGGREGATABLE(x)
+DECLARE_CLASSFACTORY_EX(cf)
+DECLARE_CLASSFACTORY()
+DECLARE_CLASSFACTORY2(lic)
+DECLARE_CLASSFACTORY_AUTO_THREAD()
+DECLARE_CONNECTION_MAP()
+DECLARE_DISPATCH_MAP()
+DECLARE_DUAL_ERRORINFO()
+DECLARE_DYNAMIC(class_name)
+DECLARE_DYNCREATE(class_name)
+DECLARE_EMPTY_MSG_MAP()
+DECLARE_EVENT_MAP()
+DECLARE_EVENTSINK_MAP()
+DECLARE_HANDLE(x)
+DECLARE_HANDLE32(x)
+DECLARE_INTERFACE(iface)    interface iface
+DECLARE_INTERFACE_(iface, baseiface)    interface iface : public baseiface
+DECLARE_INTERFACE_MAP()
+DECLARE_MAPI_INTERFACE_(iface, baseiface)	interface iface : public baseiface
+DECLARE_MAPI_INTERFACE_PTR(iface, piface)  typedef interface iface iface, FAR * piface
+DECLARE_MESSAGE_MAP()
+DECLARE_NOT_AGGREGATABLE(x)
+DECLARE_OLECMD_MAP()
+DECLARE_OLECREATE(class_name)
+DECLARE_OLECREATE_EX(class_name)
+DECLARE_OLECTLTYPE(class_name)
+DECLARE_OLETYPELIB(class_name)
+DECLARE_ONLY_AGGREGATABLE(x)
+DECLARE_OPAQUE32(x)
+DECLARE_PARSE_MAP()
+DECLARE_POLY_AGGREGATABLE(x)
+DECLARE_PROPERTY_SUPPORT(class)
+DECLARE_PROPPAGEIDS(class_name)
+DECLARE_PROTECT_FINAL_CONSTRUCT()
+DECLARE_REGISTRY(class, pid, vpid, nid, flags)
+DECLARE_REGISTRY_RESOURCE(x)
+DECLARE_SERIAL(class_name)
+DECLARE_WND_CLASS(WndClassName)
+DECLARE_WND_SUPERCLASS(WndClassName, OrigWndClassName)
+DELEGATE_DUAL_INTERFACE(objectClass, dualClass)
+END_CONNECTION_PART(localClass) } m_x##localClass; friend class X##localClass;
+END_DUAL_INTERFACE_PART(localClass) 	} m_x##localClass; friend class X##localClass;
+END_INTERFACE_PART(localClass) 	} m_x##localClass; friend class X##localClass;
+EXTERN_C extern
+EXTERN_PROCESS_LOCAL(class_name, ident_name) extern AFX_DATA AFX_DATADEF CProcessLocal<class_name> ident_name;
+IMPLEMENT_DUAL_ERRORINFO(objectClass, riidSource)
+IMPLEMENT_DYNAMIC(class_name, base_class_name)
+IMPLEMENT_DYNCREATE(class_name, base_class_name)
+IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
+IMPLEMENT_OLECREATE_EX(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
+IMPLEMENT_OLECTLTYPE(class_name, idsUserTypeName, dwOleMisc)
+IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor, wVerMinor)
+IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
+INIT_INTERFACE_PART(theClass, localClass)
+MAPIMETHOD(method)   virtual HRESULT STDMETHODCALLTYPE method
+MAPIMETHOD_(type, method) virtual type STDMETHODCALLTYPE method
+MAPIMETHOD_DECLARE(type, method, prefix)  type STDMETHODCALLTYPE
+MIDL_INTERFACE(x)   struct
+PROCESS_LOCAL(class_name, ident_name) AFX_DATADEF CProcessLocal<class_name> ident_name;
+PURE                    = 0
+STDMETHOD(method)       virtual HRESULT STDMETHODCALLTYPE method
+STDMETHOD_(type,method) virtual type STDMETHODCALLTYPE method
+STDMETHODIMP_(type)     type STDMETHODCALLTYPE
+STDMETHODIMP	HRESULT STDMETHODCALLTYPE
+SQLOLE_HELPID(id)
+THIS                    void
+THIS_
+TRY try {
+END_TRY }
+CATCH(class_name, e) } catch (class_name * e) {
+AND_CATCH(class_name, e) } catch (class_name * e) {
+END_CATCH }
+CATCH_ALL(e) } catch (CException* e) {
+AND_CATCH_ALL(e) } catch (CException* e) {
+END_CATCH_ALL }
+NTAPI *
+
+; STD Include 
+_STD_BEGIN namespace std {
+_STD_END } ;
+_STD std::
+_TRY_BEGIN	try {
+_CATCH(x)	} catch (x) {
+_CATCH_ALL	} catch (...) {
+_CATCH_END	}
+_CATCH_IO_(x)
+_RAISE(x)	throw (x)
+_RERAISE	throw
+_THROW0()	throw ()
+_THROW1(x)	throw (x)
+_THROW(x, y)	throw x(y)
+_BITMASK(E, T) 	typedef int T
+_BITMASK_OPS(T)
+_TDEF(x)		= x
+_TDEF2(x, y)	= x, y
+_CNTSIZ(iter)	ptrdiff_t
+_STCONS(ty, name, val)	enum {name = val}
+_TRY_IO_BEGIN	
+_CATCH_IO_END	
+_CATCH_IO_(x)	 
+
+
+; Other Keywords
+volatile
+__packed 
+__abstract
+__box
+__delegate
+__event
+__finally
+__gc
+__identifier
+__interface
+__nogc
+__pin
+__property
+__sealed
+__try_cast
+__typeof
+__value
+_packed 
+packed 
+
+TP_NAMESPACE(x)	TP_##x
