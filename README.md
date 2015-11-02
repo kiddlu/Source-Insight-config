@@ -4,7 +4,9 @@
 
 ####This is my own Source Insight config
 
-####I also suggest using this [tabs plugin](https://github.com/redxu/sihook/releases)
+####I also suggest using this [Tabs plugin](https://github.com/redxu/sihook/releases)
+
+####and this [UTF-8 plugin](https://github.com/redxu/siutf8)
 
 ####enjoy!
 
