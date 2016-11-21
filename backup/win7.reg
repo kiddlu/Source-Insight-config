@@ -1,0 +1,16 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Source Dynamics\Source Insight\3.0]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Source Dynamics\Source Insight\3.0\Install]
+"SetupAdminOK"="1"
+"SerialNumber"="SI3US-802287-90702"
+"UName"=hex:76,6e,03
+"UNameData"=hex:00,00,61,61
+"UOrg"=hex:76,6e,03
+"UOrgData"=hex:00,00,61,61
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Source Dynamics\Source Insight\3.0\Paths]
+"CmdShell"="C:\\Windows\\system32\\cmd.exe"
+"InitDir"="D:\\SourceInsight"
+"BackupDir"="D:\\SourceInsight\\Backup"

@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Source Dynamics\Source Insight\3.0\Install]
+"SetupAdminOK"="1"
+"SerialNumber"="SI3US-802287-90702"
+"UName"=hex:7a,7a,79,62,7b,66,6d,6c,17
+"UNameData"=hex:00,00,67,6e
+"UOrg"=hex:60,66,6d,71,7f,6a,6d,6c,31,6c,71,78,7c,76,03
+"UOrgData"=hex:00,00,79,6b
