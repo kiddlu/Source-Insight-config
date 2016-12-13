@@ -12,5 +12,5 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Source Dynamics\Source Insight\3.0\Paths]
 "CmdShell"="C:\\Windows\\system32\\cmd.exe"
-"InitDir"="D:\\SourceInsight"
-"BackupDir"="D:\\SourceInsight\\Backup"
+"InitDir"="D:\\MyStaff\\SourceInsight"
+"BackupDir"="D:\\MyStaff\\SourceInsight\\Backup"
